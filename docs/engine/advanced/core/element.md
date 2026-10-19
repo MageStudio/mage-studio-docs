@@ -33,7 +33,7 @@ The Element constructor will set the body if:
 - or a body is provided.
 
 ::: tip
-Element extends Entity, so refer to the the Entity constructor for additional information ([here](/engine/advanced/core/entity.md?id=constructor)).
+Element extends Entity, so refer to the Entity constructor for additional information ([here](/engine/advanced/core/entity.md?id=constructor)).
 :::
 :::
 
