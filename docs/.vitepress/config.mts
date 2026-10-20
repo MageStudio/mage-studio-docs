@@ -46,6 +46,7 @@ gtag('config', 'G-434GQWY0J2');`,
     nav: [
       { text: "Engine", link: "/engine/" },
       { text: "Editor", link: "/editor/" },
+      { text: "FAQ", link: "/faq" },
       { text: "GitHub", link: "https://github.com/MageStudio/Mage" },
     ],
 
