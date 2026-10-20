@@ -35,6 +35,12 @@ Once uploaded, assets can be used in several ways:
 - **Audio** — Attach to audio entities in the scene
 - **Scripts** — Attach to entities or levels via the inspector
 
+## Deleting Assets
+
+Right-click an asset tile and choose **Delete**, then confirm. The asset and its stored file are removed, along with any collision variants generated for it.
+
+An asset that's still in use can't be deleted. The editor lists what is using it, such as scene elements that reference it or another asset that depends on it (for example, a model that uses it as a texture). Remove those references first, then delete again.
+
 ## Model Preview
 
 When you select a **model** asset, the inspector's **Asset** tab renders a live preview of it above its metadata. The model is shown with a neutral white clay material and auto-framed to fill the preview, so you can read its shape clearly regardless of its textures or the scene's lighting.

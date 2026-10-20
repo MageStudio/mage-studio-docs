@@ -224,7 +224,7 @@ The canvas context menu adapts to what's under the cursor and offers, as applica
 
 ## Block Library
 
-A **block** is a saved, reusable snapshot of a group — its nodes, internal wiring, and ports — that you can drop into any script. Unlike a group (which lives in one script), a block persists in a library and can be reused freely; each dropped instance is an independent copy.
+A **block** is a saved, reusable snapshot of a group — its nodes, internal wiring, and ports — that you can drop into any script. Unlike a group (which lives in one script), a block persists in a library and can be reused freely.
 
 ### Saving a block
 
@@ -240,7 +240,13 @@ The node palette has a **Library** section at the bottom, split into:
 - **This project** — blocks scoped to the current project
 - **My library** — your account-wide blocks
 
-Each entry shows the block's name and port count. Drag a block onto the canvas to add an independent copy, or use its delete button to remove it from the library.
+Each entry shows the block's name and port count. Drag a block onto the canvas to add an instance, or use its delete button to remove it from the library.
+
+### Block instances
+
+A dropped block is a **read-only instance** linked to the library block it came from. You can expand it to see its nodes and wiring, but you can't select, move, delete, or rewire anything inside it, edit its ports, ungroup it, or add it to the library again. Moving and connecting the instance as a whole works like any other group.
+
+To change an instance, right-click it and choose **Detach from library (make editable)**. It becomes an ordinary group that you can edit freely, and it's no longer linked to the library block.
 
 ## Variable Reference Node
 

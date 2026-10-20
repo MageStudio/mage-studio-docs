@@ -2,6 +2,21 @@
 
 The editor ships continuously — this changelog groups the highlights by month.
 
+## October 2026
+
+- **Delete assets** — right-click an asset tile and choose **Delete**; deletion is blocked, with a list of what's using it, while the asset is still referenced by the scene or another asset
+- **Frozen library blocks** — a block dropped from the library is now a read-only instance linked to its library definition; expand it to view its internals, or choose **Detach from library (make editable)** to turn it back into an ordinary group
+- Game preview: switching to a non-start level now loads that level's assets instead of an empty scene
+- Copy/paste of the selected element works while a text field has focus, as long as no text is selected
+- Asset tiles wrap correctly at any panel width
+- Engine updated to `v3.31.1`: levels with spaces or capitals in their names load correctly, and each texture is fetched only once
+
+## September 2026
+
+- **Reorganize toolbar** — with several elements selected, lay them out as a **Grid**, **Line**, **Circle**, or **Arc** with adjustable spacing
+- **Boolean node** — a true/false variable node in visual coding
+- Fixes: a group's exposed ports accept connections; the Hierarchy panel refreshes when an element is renamed; by-key nodes accept a dynamic string key; arrow keys move the cursor in focused text fields instead of the camera
+
 ## August 2026
 
 - **Collision decomposition** — new Collision tab in the asset inspector generates named collision variants from a model (Fast / Balanced / Precise presets), selectable per instance in the physics inspector

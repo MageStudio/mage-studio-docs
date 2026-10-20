@@ -1,6 +1,14 @@
 # Changelog
 
-## minor: `v3.31.0` **Latest**
+## patch: `v3.31.1` **Latest**
+
+Level loading fixes:
+- Levels whose names contain spaces or capitals (e.g. "Sunny Meadow") now load their preloaded assets — level asset keys keep their exact case instead of being lowercased
+- `Router` now URL-decodes the location hash, so navigating to such a level no longer bounces back to `/`; `Router.goTo` encodes each route segment to match
+- Each texture URL is now fetched and decoded once: repeat loads of the same file (including particle textures) reuse the first load, with a per-use clone so wrap/repeat/offset settings stay independent
+- `Images.load` now waits for textures, so a level's textures are ready before it starts
+
+## minor: `v3.31.0`
 
 Collision decomposition:
 - A `MODEL_SHAPE` collider can now use **collision variants** — precomputed sets of convex hulls shipped alongside a model — to approximate concave shapes (doorways, arches, gaps) that a single convex hull would fill in
