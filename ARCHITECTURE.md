@@ -28,7 +28,7 @@ or `themeConfig.nav` in `config.mts`.
 
 ## Boundaries and invariants
 
-- Every page under `/engine/` and `/editor/` needs a sidebar entry whose `link` matches its path without `.md`.
+- A new page under `/engine/` or `/editor/` gets a sidebar entry whose `link` matches its path without `.md`.
 - Existing URLs stay stable.
 - The build does not validate `themeConfig.sidebar` or `nav` links (VitePress checks dead links in Markdown
   content only), so a typo there passes `yarn build`. Check each `link` against a real file under `docs/`.

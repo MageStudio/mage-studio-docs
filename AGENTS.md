@@ -49,8 +49,8 @@ There is no application code and no test suite.
 - Site title, nav, sidebar, search (local provider) and head tags are all set in
   `docs/.vitepress/config.mts`. The theme extends the default VitePress theme
   (`docs/.vitepress/theme/index.ts`) with `custom.css`.
-- Static assets: `docs/public/` is served from the site root (icons, manifest, `img/editor/` screenshots); `docs/img/` and
-  `docs/fonts/` hold images and fonts.
+- Static assets: `docs/public/` is served from the site root (icons, manifest, `img/editor/` screenshots);
+  `docs/img/` and `docs/fonts/` hold images and fonts.
 - The config file uses TypeScript, double quotes and trailing commas.
 
 ## Where to look next
