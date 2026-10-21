@@ -15,8 +15,8 @@ logic is site configuration and a light theme extension.
 - `docs/engine/`: engine docs (`getting-started/`, `advanced/`, `utilities/`, `changelog.md`).
 - `docs/editor/`: editor docs (`getting-started/`, `scene/`, `inspector/`, `assets/`, `scripting/`,
   `build-and-deploy/`, `changelog.md`).
-- `docs/public/`: files served at the site root (favicons, `site.webmanifest`). `docs/img/`, `docs/fonts/`: images and fonts.
-- `examples/`: standalone sample projects (`hello-cube`, `physics`, ...). `favicons/`: source icon set.
+- `docs/public/`: files served at the site root (favicons, icons, `site.webmanifest`, and editor screenshots under `img/editor/`). `docs/img/`, `docs/fonts/`: images and fonts.
+- `examples/`: standalone sample projects (`hello-cube`, `physics`, ...). `favicons/docs/`: source icon set.
 
 ## Data and control flow
 
@@ -28,8 +28,10 @@ or `themeConfig.nav` in `config.mts`.
 
 ## Boundaries and invariants
 
-- Every page needs a sidebar entry whose `link` matches its path without `.md`.
-- Existing URLs stay stable; sidebar links must resolve or the build reports dead links.
+- Every page under `/engine/` and `/editor/` needs a sidebar entry whose `link` matches its path without `.md`.
+- Existing URLs stay stable.
+- The build does not validate `themeConfig.sidebar` or `nav` links (VitePress checks dead links in Markdown
+  content only), so a typo there passes `yarn build`. Check each `link` against a real file under `docs/`.
 - Nothing is generated from the engine or editor source: docs are written by hand.
 - `dist/` is never committed.
 

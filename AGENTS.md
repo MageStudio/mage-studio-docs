@@ -28,7 +28,7 @@ There is no application code and no test suite.
 - Do not commit build output (`dist/`). `docs/.vitepress/cache` is not gitignored and some of its
   files are tracked; do not commit changes under it. Discard them after a build or dev run.
 - `.DS_Store` files are tracked; leave them alone.
-- A new page is only reachable once it is added to the sidebar in `docs/.vitepress/config.mts`
+- A new page appears in navigation once it is added to the sidebar in `docs/.vitepress/config.mts`
   (see `ARCHITECTURE.md`). Add the file and the sidebar entry in the same change.
 - Internal links are root-relative without the `.md` extension (for example
   `/engine/advanced/physics`). Do not break existing URLs when renaming or moving pages.
@@ -44,12 +44,12 @@ There is no application code and no test suite.
   holds reference pages by topic, `utilities/` holds helpers. Editor pages live under `docs/editor/`
   grouped by topic (`getting-started/`, `scene/`, `inspector/`, `assets/`, `scripting/`,
   `build-and-deploy/`).
-- File names are lowercase; some use underscores (`state_machines.md`) and some hyphens
+- File names are lowercase (except `README.md`); some use underscores (`state_machines.md`) and some hyphens
   (`text-scripts.md`). Follow the neighbouring files in the same folder.
 - Site title, nav, sidebar, search (local provider) and head tags are all set in
   `docs/.vitepress/config.mts`. The theme extends the default VitePress theme
   (`docs/.vitepress/theme/index.ts`) with `custom.css`.
-- Static assets: `docs/public/` is served from the site root (icons, manifest); `docs/img/` and
+- Static assets: `docs/public/` is served from the site root (icons, manifest, `img/editor/` screenshots); `docs/img/` and
   `docs/fonts/` hold images and fonts.
 - The config file uses TypeScript, double quotes and trailing commas.
 
